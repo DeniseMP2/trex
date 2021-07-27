@@ -106,7 +106,7 @@ function draw() {
    
     
     // pular quando a tecla espaço é acionada
-    if(touches.lenght > 0 || keyDown("space")&& trex.y > height- 100) {
+    if(touches.lenght > 0 && trex.y > height- 100) {
       trex.velocityY = -10;
       somSalto.play();
       touches = [];
@@ -145,7 +145,7 @@ function draw() {
     fimdejogo.visible = true;
     reiniciar.visible = true;
     
-    if(mousePressedOver(reiniciar) || touches[0].x == width/2 && touches[0].y == height/2){
+    if(touches.lenght > 0 && touches[0].x == width/2 && touches[0].y == height/2){
     
     reset();
     touches= [];
